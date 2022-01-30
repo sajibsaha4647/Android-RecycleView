@@ -1,5 +1,6 @@
 package com.example.recycleview.Activities.Myadaptar;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -7,6 +8,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyListAdaptar extends RecyclerView.Adapter<MyListAdaptar.Myviewholder> {
+
+    Context context ;
+    String [] title,desc;
+    int [] Images;
+
+    public MyListAdaptar(Context context, String[] title, String[] desc, int[] images) {
+        this.context = context;
+        this.title = title;
+        this.desc = desc;
+        Images = images;
+    }
 
     @NonNull
     @Override
