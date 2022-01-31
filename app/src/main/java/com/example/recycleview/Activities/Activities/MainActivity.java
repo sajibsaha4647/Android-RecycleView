@@ -1,6 +1,7 @@
 package com.example.recycleview.Activities.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         myListAdaptar = new MyListAdaptar(this,title,discript,images);
 
         recyclerView.setAdapter(myListAdaptar);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this)); //vartical align
+        recyclerView.setLayoutManager(new GridLayoutManager(this,3)); //horizontal align
+
 
         myListAdaptar.setOnItemClickListener(new MyListAdaptar.Clicklistener() {
             @Override
